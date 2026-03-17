@@ -55,8 +55,8 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--accent);transition:width .3s}
 .nav-links a:hover{color:var(--text)}
 .nav-links a:hover::after{width:100%}
-.nav-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.5rem;border-radius:100px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#050a12;font-weight:700;font-size:.82rem;text-decoration:none;letter-spacing:.04em;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
-.nav-cta::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(255,255,255,.15),transparent);transform:rotate(45deg) translateX(-100%);transition:none}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.5rem;border-radius:100px;background:#fff;color:#070B14;font-weight:700;font-size:.82rem;text-decoration:none;letter-spacing:.04em;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden;white-space:nowrap}
+.nav-cta::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(74,159,232,.15),transparent);transform:rotate(45deg) translateX(-100%);transition:none}
 .nav-cta:hover::before{transform:rotate(45deg) translateX(100%);transition:transform .6s}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(74,159,232,.3)}
 .nav-socials{display:flex;align-items:center;gap:.75rem}
@@ -64,7 +64,11 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 .nav-social:hover{color:var(--accent);border-color:rgba(74,159,232,.3);background:rgba(74,159,232,.06);transform:scale(1.1)}
 .menu-toggle{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:.5rem}
 .menu-toggle svg{width:24px;height:24px}
-@media(max-width:768px){
+@media(max-width:1080px){
+  .nav-links{gap:1.5rem}
+  .nav-links a{font-size:.75rem;letter-spacing:.04em}
+}
+@media(max-width:960px){
   .menu-toggle{display:block}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(7,11,20,.96);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:1rem 0}
   .nav-links.open{display:flex}
@@ -72,6 +76,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
   .nav-links a{display:block;padding:.75rem 2rem;font-size:.9rem}
   .nav-links a::after{display:none}
   .nav-links .nav-cta{margin:1rem 2rem;text-align:center;display:block;border-radius:100px}
+  .nav-socials{justify-content:center;padding:.5rem 2rem}
 }
 
 /* ═══ HERO ═══ */
@@ -173,7 +178,7 @@ section{padding:7rem 0;position:relative}
 .about-text p strong{color:var(--text);font-weight:600}
 
 /* ═══ WHY HDKN ═══ */
-.why-hdkn{background:var(--bg2);padding-bottom:4rem}
+.why-hdkn{background:var(--bg2);padding-bottom:3rem}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
 @media(max-width:900px){.why-grid{grid-template-columns:1fr}}
 .why-card{padding:2.5rem 2rem;border-radius:20px;background:var(--bg);border:1px solid var(--border);position:relative;overflow:hidden;transition:all .4s}
@@ -187,7 +192,7 @@ section{padding:7rem 0;position:relative}
 .why-bottom p{font-size:1.1rem;color:var(--text);font-family:var(--serif);font-style:italic;max-width:700px;margin:0 auto;line-height:1.6}
 
 /* ═══ HOW IT WORKS ═══ */
-.how{background:var(--bg2);padding-top:7rem}
+.how{background:var(--bg2);padding-top:4rem}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:4rem}
 @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
@@ -469,6 +474,7 @@ section{padding:7rem 0;position:relative}
     <div class="why-bottom" data-reveal>
       <p>Put simply — it's private equity access to the world's only commercial natural hydrogen producer, fractionalized on-chain, at a discount.</p>
       <a href="https://hdkn.store.brickken.com" target="_blank" class="btn-primary" style="margin-top:1.5rem">Access the Token Sale <span class="btn-arrow">→</span></a>
+      <div style="margin-top:2.5rem;border-bottom:1px solid var(--border)"></div>
     </div>
   </div>
 </section>
