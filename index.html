@@ -74,10 +74,11 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
   .nav-links.open{display:flex}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:.75rem 2rem;font-size:.9rem}
+  .nav-links a.nav-social{display:flex;padding:0}
   .nav-links a::after{display:none}
   .nav-links .nav-cta{margin:1rem 2rem;text-align:center;display:block;border-radius:100px}
-  .nav-socials{justify-content:center;padding:.75rem 2rem;gap:1rem}
-  .nav-socials .nav-social{width:36px;height:36px;min-width:36px;min-height:36px;flex-shrink:0}
+  .nav-socials{display:flex;justify-content:center;padding:.75rem 2rem;gap:1rem}
+  .nav-socials .nav-social{width:36px !important;height:36px !important;max-width:36px;max-height:36px;min-width:36px;min-height:36px;flex:0 0 36px;padding:0;display:flex;align-items:center;justify-content:center}
   .nav-socials .nav-social svg{width:16px;height:16px}
 }
 
