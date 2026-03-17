@@ -70,14 +70,15 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:h
 }
 @media(max-width:960px){
   .menu-toggle{display:block}
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(7,11,20,.96);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:1rem 0}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#070B14;border-bottom:1px solid var(--border);padding:1rem 0;z-index:100}
   .nav-links.open{display:flex}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:.75rem 2rem;font-size:.9rem}
   .nav-links a::after{display:none}
   .nav-links .nav-cta{margin:1rem 2rem;text-align:center;display:block;border-radius:100px}
   .nav-socials{justify-content:center;padding:.75rem 2rem;gap:1rem}
-  .nav-socials .nav-social{width:40px;height:40px;flex-shrink:0}
+  .nav-socials .nav-social{width:36px;height:36px;min-width:36px;min-height:36px;flex-shrink:0}
+  .nav-socials .nav-social svg{width:16px;height:16px}
 }
 
 /* ═══ HERO ═══ */
